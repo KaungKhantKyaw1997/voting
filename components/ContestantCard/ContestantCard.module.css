@@ -1,0 +1,68 @@
+.card {
+  background: url("/images/Card-Bg.png") center/cover no-repeat;
+  border-radius: 8px;
+  border-width: 2px;
+  border-color: color-mix(in srgb, var(--color-white) 20%, transparent);
+}
+
+.cardImage {
+  width: 129px;
+  height: 113px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 8px;
+}
+
+.cardBottom {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 12px;
+}
+
+.bottomRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.cardName {
+  font-family: var(--font-race);
+  font-size: 12px;
+}
+
+.votesInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.votingCount {
+  font-size: 6px;
+  font-weight: 600;
+  line-height: 18px;
+  color: color-mix(in srgb, var(--color-white) 60%, transparent);
+}
+
+.cardVotes {
+  font-family: var(--font-race);
+  line-height: 18px;
+}
+
+.votesNumber {
+  font-size: 18px;
+}
+
+.votesText {
+  font-size: 8px;
+}
+
+.voteButton {
+  padding: 4px 6px;
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: var(--font-race);
+  font-size: 8px;
+}

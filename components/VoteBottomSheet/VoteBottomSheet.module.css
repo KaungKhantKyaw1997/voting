@@ -1,0 +1,95 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 1000;
+}
+
+.sheet {
+  width: 100%;
+  max-width: 400px;
+  background: url("/images/Card-Bg.png") center/cover no-repeat;
+  border-radius: 12px 12px 0 0;
+  border-top: 2px solid color-mix(in srgb, var(--color-white) 20%, transparent);
+  padding: 16px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+
+.closeButton {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.closeButton img {
+  width: 24px;
+  height: 24px;
+}
+
+.image {
+  width: 173px;
+  height: 194px;
+  object-fit: contain;
+}
+
+.name {
+  font-family: var(--font-race);
+  font-size: 20px;
+  line-height: 18px;
+}
+
+.votesInfo {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.votingCount {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  color: color-mix(in srgb, var(--color-white) 60%, transparent);
+}
+
+.cardVotes {
+  font-family: var(--font-race);
+  line-height: 18px;
+}
+
+.votesNumber {
+  font-size: 14px;
+}
+
+.votesText {
+  font-family: var(--font-race);
+  font-size: 14px;
+}
+
+.voteButton {
+  padding: 4px 6px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: var(--font-race);
+  width: 100%;
+  height: 44px;
+}

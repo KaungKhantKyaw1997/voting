@@ -1,0 +1,75 @@
+.container {
+  position: relative;
+  padding: 16px;
+  color: var(--color-white);
+}
+
+.topRow {
+  position: absolute;
+  top: 20px;
+  left: 12px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.backBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.backIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.imageRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 10px;
+}
+
+.leftImage {
+  height: 56px;
+  object-fit: contain;
+}
+
+.rightImage {
+  height: 95px;
+  object-fit: contain;
+}
+
+.textRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 25px;
+}
+
+.leftText {
+  font-family: var(--font-race);
+  font-size: 18px;
+}
+
+.rightBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: color-mix(in srgb, var(--color-black) 40%, transparent);
+  padding: 4px 12px 4px 12px;
+  border-radius: 30px;
+}
+
+.rightBadgeIcon {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+}
+
+.rightBadgeText {
+  font-family: var(--font-race);
+  font-size: 10px;
+  color: var(--color-primary);
+}
