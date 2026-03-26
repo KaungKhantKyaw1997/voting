@@ -1,0 +1,32 @@
+.listContainer {
+  overflow-y: auto;
+}
+.leaderCard {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  margin: 16px;
+  height: 61px;
+  border-radius: 8px;
+  display: flex;
+  padding: 0 12px;
+  align-items: center;
+  font-weight: 400;
+  font-family: var(--font-race);
+  position: relative;
+}
+.img {
+  width: 56px;
+  margin-left: 8px;
+}
+.number {
+  font-size: 14px;
+}
+.votingCount {
+  font-size: 15px;
+  position: absolute;
+  right: 36px;
+}
+.label {
+  font-size: 8px;
+  display: block;
+  color: rgba(255, 255, 255, 0.6);
+}

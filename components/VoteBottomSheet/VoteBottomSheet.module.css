@@ -67,7 +67,6 @@
   line-height: 18px;
   color: color-mix(in srgb, var(--color-white) 60%, transparent);
 }
-
 .cardVotes {
   font-family: var(--font-race);
   line-height: 18px;

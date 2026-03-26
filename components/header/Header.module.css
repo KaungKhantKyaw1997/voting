@@ -29,28 +29,32 @@
   justify-content: space-between;
   align-items: baseline;
   margin-top: 10px;
+  align-items: start;
 }
 
 .leftImage {
   height: 56px;
   object-fit: contain;
+  margin-top: 12px;
 }
 
 .rightImage {
   height: 95px;
   object-fit: contain;
+  margin-top: 16px;
 }
 
 .textRow {
-  display: flex;
+  display: block;
   justify-content: space-between;
   align-items: baseline;
-  margin-top: 25px;
+  justify-items: end;
 }
 
 .leftText {
   font-family: var(--font-race);
   font-size: 18px;
+  margin-top: 18px;
 }
 
 .rightBadge {
@@ -60,6 +64,8 @@
   background-color: color-mix(in srgb, var(--color-black) 40%, transparent);
   padding: 4px 12px 4px 12px;
   border-radius: 30px;
+  position: absolute;
+  bottom: 16px;
 }
 
 .rightBadgeIcon {
@@ -72,4 +78,8 @@
   font-family: var(--font-race);
   font-size: 10px;
   color: var(--color-primary);
+  margin-top: 4px;
+}
+.largeImage {
+  height: 115px;
 }

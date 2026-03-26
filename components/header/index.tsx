@@ -10,6 +10,7 @@ type HeaderProps = {
   leftImage?: string;
   rightImage?: string;
   rightIcon?: string;
+  onClick: () => void;
 };
 
 export default function Header({
@@ -19,44 +20,57 @@ export default function Header({
   leftImage,
   rightImage,
   rightIcon,
+  onClick,
 }: HeaderProps) {
   const router = useRouter();
+  const isLargeImg = !rightText;
 
   return (
     <div className={styles.container}>
-      <div className={styles.topRow}>
-        <button className={styles.backBtn} onClick={() => router.back()}>
-          <img src="/svg/back.svg" alt="back" className={styles.backIcon} />
-        </button>
-      </div>
-
       <div className={styles.imageRow}>
-        {leftImage ? (
-          <img src={leftImage} className={styles.leftImage} />
-        ) : (
-          <div />
-        )}
+        <div>
+          <button className={styles.backBtn} onClick={() => router.back()}>
+            <img src="/svg/back.svg" alt="back" className={styles.backIcon} />
+          </button>
 
-        {rightImage ? (
-          <img src={rightImage} className={styles.rightImage} />
-        ) : (
-          <div />
-        )}
-      </div>
-
-      <div className={styles.textRow}>
-        <p className={styles.leftText}>{leftText}</p>
-
-        {showRightText && rightText ? (
-          <div className={styles.rightBadge}>
-            {rightIcon && (
-              <img src={rightIcon} alt="" className={styles.rightBadgeIcon} />
+          {leftImage ? (
+            <img src={leftImage} className={styles.leftImage} />
+          ) : (
+            <div />
+          )}
+          <p className={styles.leftText}>{leftText}</p>
+        </div>
+        <div>
+          <div className={styles.textRow}>
+            {rightImage ? (
+              <img
+                src={rightImage}
+                className={`${styles.rightImage} ${
+                  isLargeImg ? styles.largeImage : ""
+                }`}
+              />
+            ) : (
+              <div />
             )}
-            <span className={styles.rightBadgeText}>{rightText}</span>
+
+            {showRightText && rightText ? (
+              <div className={styles.rightBadge}>
+                {rightIcon && (
+                  <img
+                    src={rightIcon}
+                    alt=""
+                    className={styles.rightBadgeIcon}
+                  />
+                )}
+                <span className={styles.rightBadgeText} onClick={onClick}>
+                  {rightText}
+                </span>
+              </div>
+            ) : (
+              <div />
+            )}
           </div>
-        ) : (
-          <div />
-        )}
+        </div>
       </div>
     </div>
   );
