@@ -7,7 +7,7 @@ type VoteBottomSheetProps = {
   isOpen: boolean;
   onClose: () => void;
   name: string;
-  votes: number;
+  votes: string;
   image: string;
   onVote: () => void;
 };
@@ -29,17 +29,27 @@ const VoteBottomSheet: FC<VoteBottomSheetProps> = ({
           <img src="/svg/close.svg" alt="close" />
         </button>
 
-        <img src={image} className={styles.image} />
-        <p className={styles.name}>{name}</p>
-        <div className={styles.votesInfo}>
+        {/* <img src={image} className={styles.image} /> */}
+        {/* <p className={styles.name}>{name}</p> */}
+        {/* <div className={styles.votesInfo}>
           <p className={styles.votingCount}>Voting Count</p>
           <p className={styles.cardVotes}>
             <span className={styles.votesNumber}>{votes}</span>{" "}
             <span className={styles.votesText}>votes</span>
           </p>
         </div>
-        <button className={styles.voteButton} onClick={onVote}>
+         <button className={styles.voteButton} onClick={onVote}>
           Vote
+        </button>
+         */}
+
+        <img src="/svg/voteSuccessIcon.svg" />
+        <p className={styles.name}>voting Successful</p>
+        <p className={styles.votingCount}>
+          Special thanks for the voting and support
+        </p>
+        <button className={styles.voteButton} onClick={onVote}>
+          Back
         </button>
       </div>
     </div>

@@ -1,13 +1,35 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./page.module.css";
 import { useRouter } from "next/navigation";
+import { getCredential, setCredential } from "@/services/mainSerive";
+import { CREDENTIAL } from "@/public/custom/credential";
+import { CredentialData } from "@/models/main";
+import { register } from "@/services/votingService";
+import { decrypt } from "@/services/cryptoService";
 
 export default function IntroPage() {
   const [accepted, setAccepted] = useState(false);
   const router = useRouter();
-
+  setCredential(CREDENTIAL);
+  useEffect(() => {
+    const credential: CredentialData = getCredential();
+    const reqData = {
+      app_version: credential.appVersion,
+      device_id: credential.deviceId,
+      session_id: credential.sessionId,
+      wallet_user_id: credential.walletUserId,
+    };
+    register(reqData)
+      .then((data) => {
+        const dData = JSON.parse(decrypt(data.data));
+        console.log(dData);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
   const handleVote = () => {
     if (!accepted) return;
     router.push("/voting");

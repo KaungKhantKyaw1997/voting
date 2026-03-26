@@ -4,7 +4,7 @@ import styles from "./ContestantCard.module.css";
 
 type ContestantCardProps = {
   name: string;
-  votes: number;
+  votes: string;
   image: string;
   onVote?: () => void;
 };
@@ -28,7 +28,9 @@ export default function ContestantCard({
           <div className={styles.votesInfo}>
             <p className={styles.votingCount}>Voting Count</p>
             <p className={styles.cardVotes}>
-              <span className={styles.votesNumber}>{votes}</span>{" "}
+              <span className={styles.votesNumber}>
+                {votes.toLocaleString()}
+              </span>{" "}
               <span className={styles.votesText}>votes</span>
             </p>
           </div>

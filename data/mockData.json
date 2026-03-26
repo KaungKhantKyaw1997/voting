@@ -34,5 +34,41 @@
     "name": "Zaw Win",
     "votes": 600,
     "image": "/mock/contestant4.png"
+  },
+  {
+    "id": 7,
+    "name": "Aye Myat",
+    "votes": 1000,
+    "image": "/mock/contestant1.png"
+  },
+  {
+    "id": 8,
+    "name": "Kaung Kyaw",
+    "votes": 850,
+    "image": "/mock/contestant2.png"
+  },
+  {
+    "id": 9,
+    "name": "Thida Hla",
+    "votes": 720,
+    "image": "/mock/contestant3.png"
+  },
+  {
+    "id": 10,
+    "name": "Zaw Win",
+    "votes": 600,
+    "image": "/mock/contestant4.png"
+  },
+  {
+    "id": 11,
+    "name": "Thida Hla",
+    "votes": 720,
+    "image": "/mock/contestant3.png"
+  },
+  {
+    "id": 12,
+    "name": "Zaw Win",
+    "votes": 600,
+    "image": "/mock/contestant4.png"
   }
 ]
